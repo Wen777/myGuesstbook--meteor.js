@@ -1,0 +1,33 @@
+﻿<head>
+  <title>myGuesstbook</title>
+</head>
+
+<body>
+    
+  {{> tem}}
+</body>
+
+<template name="tem">
+    <img src="myGuesstbook\picture\55n.jpg">
+    <hr>
+    <h2>GuesstBook</h2>
+    <hr>
+
+    {{#each posts}}
+        <hr>
+        <p>
+            {{text}} / {{author}}
+        </p>
+        <hr>
+    {{/each}}
+    
+    <form>
+        <h3>留言</h3>
+        <input type="text" name="Cin">
+        <br>
+        <h3>作者</h3>
+        <input type="text" name="authorName">
+        <input type="submit" value="Submit">
+    </form>
+    <hr>
+</template>
